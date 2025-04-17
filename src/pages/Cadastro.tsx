@@ -66,12 +66,15 @@ export default function Cadastro() {
         <p>Rápido e grátis, vamos nessa</p>
 
         <form onSubmit={handleSubmit}>
+          <label>Nome</label>
           <input
             name="nome"
             placeholder="Digite aqui seu nome"
             value={formData.nome}
             onChange={handleChange}
           />
+
+          <label>Email</label>
           <input
             name="email"
             type="email"
@@ -79,6 +82,8 @@ export default function Cadastro() {
             value={formData.email}
             onChange={handleChange}
           />
+
+          <label>Senha</label>
           <input
             name="senha"
             type="password"
@@ -86,6 +91,8 @@ export default function Cadastro() {
             value={formData.senha}
             onChange={handleChange}
           />
+
+          <label>Confirmar Senha</label>
           <input
             name="confirmarSenha"
             type="password"
@@ -93,18 +100,24 @@ export default function Cadastro() {
             value={formData.confirmarSenha}
             onChange={handleChange}
           />
+
+          <label>Bio</label>
           <textarea
             name="bio"
             placeholder="Fale sobre você"
             value={formData.bio}
             onChange={handleChange}
           />
+
+          <label>Contato</label>
           <input
             name="contato"
             placeholder="Opção de contato"
             value={formData.contato}
             onChange={handleChange}
           />
+
+          <label>Selecionar Cargo</label>
           <select
             title="cargo"
             name="cargo"
@@ -116,6 +129,7 @@ export default function Cadastro() {
             <option value="backend">Desenvolvedor Back-End</option>
             <option value="fullstack">Fullstack</option>
           </select>
+
           <button type="submit">Cadastrar</button>
         </form>
       </div>
