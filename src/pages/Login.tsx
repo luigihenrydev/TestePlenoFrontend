@@ -14,7 +14,7 @@ export default function Login() {
 
   return (
     <div className="login-container">
-      <h1 className="login-title">capys</h1>
+      <h1 className="login-title">Capys</h1>
       <div className="login-card">
         <h2>Login</h2>
         <form onSubmit={handleSubmit} className="login-form">

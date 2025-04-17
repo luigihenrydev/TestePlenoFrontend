@@ -48,7 +48,7 @@ export default function Cadastro() {
   return (
     <div className="cadastro-container">
       <div className="cadastro-header">
-        <h1 className="cadastro-logo">capys</h1>
+        <h1 className="cadastro-logo">Capys</h1>
         <button onClick={() => navigate("/")} className="cadastro-voltar">Voltar</button>
       </div>
 
@@ -64,7 +64,7 @@ export default function Cadastro() {
 
       <div className="cadastro-card">
         <h2>Crie sua conta</h2>
-        <p>Rápido e grátis, vamos nessa</p>
+        <p>Rápido e grátis, vamos nessa!</p>
         <form className="cadastro-form" onSubmit={handleSubmit}>
           <input
             name="nome"
