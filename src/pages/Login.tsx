@@ -10,6 +10,12 @@ export default function Login() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Login:", { email, senha });
+
+    if(email && senha){
+      navigate("/home");
+    }else{
+      alert("login e senha invalidos");
+    }
   };
 
   return (

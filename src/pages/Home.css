@@ -1,0 +1,73 @@
+/* Home.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a1623;
+    color: #ffffff;
+  }
+  
+  .home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-header {
+    background-color: #0e1c2f;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .home-logo {
+    color: #f24e1e;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .home-user-info {
+    text-align: center;
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+  
+  
+  .home-role {
+    font-size: 14px;
+    color: #b0b0b0;
+  }
+  
+  .home-logout-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #122c4a;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .home-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .home-main h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .home-main p {
+    font-size: 16px;
+    color: #cccccc;
+  }
