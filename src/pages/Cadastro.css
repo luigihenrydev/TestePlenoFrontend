@@ -1,0 +1,113 @@
+/* Cadastro.css */
+
+.cadastro-container {
+    min-height: 100vh;
+    background-color: #0a192f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    font-family: sans-serif;
+    position: relative;
+  }
+  
+  .cadastro-header {
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cadastro-logo {
+    color: #e63946;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .cadastro-voltar {
+    background-color: #0e2a47;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .cadastro-voltar:hover {
+    background-color: #122c4a;
+  }
+  
+  .cadastro-mensagem {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .mensagem-sucesso {
+    background-color: #16a34a;
+    border-left: 4px solid #4ade80;
+  }
+  
+  .mensagem-erro {
+    background-color: #dc2626;
+    border-left: 4px solid #f87171;
+  }
+  
+  .cadastro-card {
+    background-color: #0e2a47;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .cadastro-card h2 {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+  
+  .cadastro-card p {
+    color: #9ca3af;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .cadastro-input,
+  .cadastro-textarea,
+  .cadastro-select {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #1f2937;
+    color: white;
+    border: 1px solid #4b5563;
+  }
+  
+  .cadastro-button {
+    padding: 0.5rem;
+    background-color: #a44a1f;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .cadastro-button:hover {
+    background-color: #913f19;
+  }
+  

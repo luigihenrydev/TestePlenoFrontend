@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Cadastro.css";
 
 type FormData = {
   nome: string;
@@ -29,11 +30,7 @@ export default function Cadastro() {
 
   const navigate = useNavigate();
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -49,88 +46,84 @@ export default function Cadastro() {
   };
 
   return (
-    <div>
-      <div>
-        <h1>capys</h1>
-        <button onClick={() => navigate("/")}>Voltar</button>
+    <div className="cadastro-container">
+      <div className="cadastro-header">
+        <h1 className="cadastro-logo">capys</h1>
+        <button onClick={() => navigate("/")} className="cadastro-voltar">Voltar</button>
       </div>
 
       {mensagem && (
-        <div>
+        <div
+          className={`cadastro-mensagem ${
+            mensagem.tipo === "sucesso" ? "mensagem-sucesso" : "mensagem-erro"
+          }`}
+        >
           {mensagem.texto}
         </div>
       )}
 
-      <div>
+      <div className="cadastro-card">
         <h2>Crie sua conta</h2>
         <p>Rápido e grátis, vamos nessa</p>
-
-        <form onSubmit={handleSubmit}>
-          <label>Nome</label>
+        <form className="cadastro-form" onSubmit={handleSubmit}>
           <input
             name="nome"
             placeholder="Digite aqui seu nome"
             value={formData.nome}
             onChange={handleChange}
+            className="cadastro-input"
           />
-
-          <label>Email</label>
           <input
             name="email"
             type="email"
             placeholder="Digite aqui seu email"
             value={formData.email}
             onChange={handleChange}
+            className="cadastro-input"
           />
-
-          <label>Senha</label>
           <input
             name="senha"
             type="password"
             placeholder="Digite aqui sua senha"
             value={formData.senha}
             onChange={handleChange}
+            className="cadastro-input"
           />
-
-          <label>Confirmar Senha</label>
           <input
             name="confirmarSenha"
             type="password"
             placeholder="Digite novamente sua senha"
             value={formData.confirmarSenha}
             onChange={handleChange}
+            className="cadastro-input"
           />
-
-          <label>Bio</label>
           <textarea
             name="bio"
             placeholder="Fale sobre você"
             value={formData.bio}
             onChange={handleChange}
+            className="cadastro-textarea"
           />
-
-          <label>Contato</label>
           <input
             name="contato"
             placeholder="Opção de contato"
             value={formData.contato}
             onChange={handleChange}
+            className="cadastro-input"
           />
-
-          <label>Selecionar Cargo</label>
           <select
             title="cargo"
             name="cargo"
             value={formData.cargo}
             onChange={handleChange}
+            className="cadastro-select"
           >
             <option value="">Selecionar Cargo</option>
             <option value="frontend">Desenvolvedor Front-End</option>
             <option value="backend">Desenvolvedor Back-End</option>
             <option value="fullstack">Fullstack</option>
           </select>
-
-          <button type="submit">Cadastrar</button>
+          <button type="submit" className="cadastro-button">Cadastrar</button>
         </form>
       </div>
     </div>
